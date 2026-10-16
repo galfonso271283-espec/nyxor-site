@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="NYXOR Performance Science: creatina Creapure® e whey 100% isolado, com dose clínica no rótulo e laudo de cada lote. Lançamento em abril de 2027.">
+<link rel="canonical" href="https://nyxorperformance.com.br/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#121417">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="NYXOR">
+<meta property="og:title" content="NYXOR Performance Science">
+<meta property="og:description" content="Suplementação com base científica. Creatina Creapure® e whey isolado, com laudo de cada lote. Entre na lista de espera.">
+<meta property="og:url" content="https://nyxorperformance.com.br/">
+<title>NYXOR Performance Science</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: dark-first lab site. Full-width bands, 1180px inner column, product "potes" drawn in CSS from the label system. */
+:root {
+  --bg: #121417;          /* Grafite */
+  --surface: #1A1D21;
+  --surface-2: #22262B;
+  --line: #33383D;
+  --fg: #F4F5F2;          /* Branco laboratório */
+  --muted: #A9ADA6;
+  --accent: #C8F135;      /* Sinal */
+  --accent-ink: #121417;
+  --caramel: #C48A4A;
+  --pot: #121417;
+  --pot-line: #3A3F3B;
+  --pot-fg: #F4F5F2;
+  --display: 'Archivo', 'Arial Narrow', 'Helvetica Neue', sans-serif;
+  --body: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #F4F5F2; --surface: #E9EAE6; --surface-2: #FFFFFF; --line: #D5D8D2;
+    --fg: #121417; --muted: #5B605A; --accent: #5E7F00; --accent-ink: #F4F5F2;
+    --caramel: #8F5A22; --pot: #121417; --pot-line: #3A3F3B; --pot-fg: #F4F5F2;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #F4F5F2; --surface: #E9EAE6; --surface-2: #FFFFFF; --line: #D5D8D2;
+  --fg: #121417; --muted: #5B605A; --accent: #5E7F00; --accent-ink: #F4F5F2;
+  --caramel: #8F5A22; --pot: #121417; --pot-line: #3A3F3B; --pot-fg: #F4F5F2;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 17px; line-height: 1.55; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+h1, h2, h3 { font-family: var(--display); font-stretch: 75%; font-weight: 700; line-height: 0.95; margin: 0; text-wrap: balance; letter-spacing: 0.01em; }
+p { margin: 0; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.band { padding-block: clamp(64px, 9vw, 112px); border-top: 1px solid var(--line); }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+.mono { font-family: var(--mono); }
+.lead { font-size: clamp(18px, 2vw, 21px); color: var(--muted); max-width: 60ch; }
+.section-head { display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px; }
+.section-head h2 { font-size: clamp(44px, 7vw, 84px); text-transform: uppercase; }
+
+/* Logo */
+.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo svg { width: 30px; height: 30px; flex-shrink: 0; }
+.logo .word { font-family: var(--display); font-stretch: 75%; font-weight: 700; font-size: 24px; letter-spacing: 0.05em; line-height: 1; }
+.mark-line { stroke: var(--fg); }
+.mark-dot { fill: var(--accent); }
+
+/* Header */
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; flex-wrap: wrap; padding-block: 8px; }
+nav.main { display: flex; gap: 4px; flex-wrap: wrap; align-items: center; }
+nav.main a { text-decoration: none; font-family: var(--mono); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; padding: 12px 10px; color: var(--muted); border-radius: 4px; }
+nav.main a:hover { color: var(--fg); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 4px; border: 1px solid var(--accent); background: var(--accent); color: var(--accent-ink); font-family: var(--mono); font-weight: 500; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: transform .15s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn.ghost { background: transparent; color: var(--fg); border-color: var(--line); }
+nav.main .btn { min-height: 44px; padding: 0 16px; color: var(--accent-ink); margin-left: 8px; }
+@media (max-width: 760px) { nav.main a:not(.btn) { display: none; } }
+
+/* Hero */
+.hero { padding-block: clamp(48px, 8vw, 96px) clamp(56px, 8vw, 96px); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+@media (max-width: 860px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } }
+.hero-copy { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+.hero h1 { font-size: clamp(64px, 12vw, 148px); text-transform: uppercase; line-height: 0.86; }
+.hero h1 span { color: var(--accent); }
+.launch { display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; }
+.launch i { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: 0.35; } }
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.chart { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.chart-top, .chart-bottom { display: flex; justify-content: space-between; gap: 12px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: var(--muted); text-transform: uppercase; flex-wrap: wrap; }
+.chart svg { width: 100%; height: auto; display: block; }
+.chart .grid line { stroke: var(--line); stroke-width: 1; }
+.chart .curve { fill: none; stroke: var(--fg); stroke-width: 14; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 900; stroke-dashoffset: 0; animation: draw 1.8s cubic-bezier(.6,0,.2,1) both; }
+.chart .dot { fill: var(--accent); animation: pop .4s 1.6s both; transform-origin: 300px 40px; }
+.chart .ticks text { fill: var(--muted); font-family: var(--mono); font-size: 11px; }
+@keyframes draw { from { stroke-dashoffset: 900; } }
+@keyframes pop { from { transform: scale(0); } }
+
+/* Spec strip */
+.strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.strip .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.strip div.cell { padding: 22px 16px 22px 0; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.strip strong { font-family: var(--display); font-stretch: 75%; font-size: 34px; line-height: 1; }
+.strip span { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.06em; }
+@media (max-width: 760px) { .strip .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Products */
+.products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 960px) { .products { grid-template-columns: minmax(0, 1fr); max-width: 520px; } }
+.product { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; display: flex; flex-direction: column; overflow: hidden; }
+.stage { background: var(--surface-2); display: flex; align-items: flex-end; justify-content: center; padding: 36px 16px 0; min-height: 360px; border-bottom: 1px solid var(--line); }
+.pot { display: flex; flex-direction: column; align-items: center; }
+.pot .lid { height: 26px; border-radius: 8px 8px 3px 3px; background: #C8F135; }
+.pot.whey .lid { background: #2A2E33; }
+.pot .body { margin-top: 5px; background: var(--pot); color: var(--pot-fg); border-radius: 5px 5px 18px 18px; padding: 16px 14px; display: flex; flex-direction: column; justify-content: space-between; outline: 1px solid #C8F135; outline-offset: -7px; font-family: var(--display); box-shadow: 0 18px 30px -18px rgba(0,0,0,.6); }
+.pot.whey .body { outline: none; }
+.pot .row { display: flex; justify-content: space-between; align-items: center; gap: 6px; }
+.pot .brand { display: flex; align-items: center; gap: 5px; font-stretch: 75%; font-weight: 700; font-size: 14px; letter-spacing: 0.05em; }
+.pot .brand svg { width: 16px; height: 16px; }
+.pot .tag { font-family: var(--mono); font-size: 7px; letter-spacing: 0.18em; background: #C8F135; color: #121417; padding: 2px 5px; border-radius: 2px; }
+.pot .tag.line { background: transparent; color: #C8F135; padding: 0; }
+.pot .cat { font-family: var(--mono); font-size: 7px; letter-spacing: 0.18em; color: #A9ADA6; }
+.pot .name { font-stretch: 75%; font-weight: 700; line-height: 0.92; text-transform: uppercase; }
+.pot .sub { font-stretch: 75%; font-weight: 500; color: #C8F135; line-height: 1; }
+.pot .facts { border-top: 1px solid var(--pot-line); border-bottom: 1px solid var(--pot-line); padding: 5px 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); font-family: var(--mono); font-size: 7px; line-height: 1.35; }
+.pot .flavor { align-self: flex-start; background: #C48A4A; color: #121417; font-family: var(--mono); font-size: 7px; letter-spacing: 0.14em; padding: 3px 6px; border-radius: 2px; }
+.pot .foot { font-family: var(--mono); font-size: 6px; letter-spacing: 0.28em; color: #A9ADA6; }
+.pot .net { font-stretch: 75%; font-weight: 700; font-size: 15px; }
+.pot.s150 .lid { width: 148px; } .pot.s150 .body { width: 170px; height: 250px; } .pot.s150 .name { font-size: 30px; } .pot.s150 .sub { font-size: 13px; }
+.pot.s300 .lid { width: 180px; } .pot.s300 .body { width: 206px; height: 300px; } .pot.s300 .name { font-size: 36px; } .pot.s300 .sub { font-size: 15px; }
+.pot.whey .lid { width: 206px; height: 30px; } .pot.whey .body { width: 236px; height: 320px; } .pot.whey .name { font-size: 40px; } .pot.whey .sub { font-size: 15px; }
+.pot .big { font-stretch: 75%; font-weight: 700; font-size: 30px; color: #C8F135; line-height: 1; }
+
+.pinfo { padding: 24px; display: flex; flex-direction: column; gap: 18px; flex-grow: 1; }
+.pinfo h3 { font-size: 34px; text-transform: uppercase; }
+.pinfo .role { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.pinfo p { color: var(--muted); font-size: 16px; }
+dl.specs { margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); border-top: 1px solid var(--line); }
+dl.specs dt, dl.specs dd { margin: 0; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+dl.specs dt { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; color: var(--muted); text-transform: uppercase; padding-right: 16px; }
+dl.specs dd { text-align: right; font-variant-numeric: tabular-nums; }
+.price { margin-top: auto; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.price strong { font-family: var(--display); font-stretch: 75%; font-size: 40px; line-height: 1; font-variant-numeric: tabular-nums; }
+.price span { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.note { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 20px; }
+
+/* Method */
+.method { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); }
+@media (max-width: 960px) { .method { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .method { grid-template-columns: minmax(0, 1fr); } }
+.method article { padding: 28px 24px 28px 0; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid var(--line); min-width: 0; }
+.method .figure { font-family: var(--mono); font-size: 13px; color: var(--accent); letter-spacing: 0.08em; }
+.method h3 { font-size: 30px; text-transform: uppercase; }
+.method p { color: var(--muted); font-size: 16px; }
+
+.versus { margin-top: 56px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 760px) { .versus { grid-template-columns: minmax(0, 1fr); } }
+.versus div { border: 1px solid var(--line); border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+.versus h3 { font-size: 22px; text-transform: uppercase; }
+.versus ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 16px; }
+.versus li { display: flex; gap: 10px; }
+.versus li::before { content: "—"; color: var(--muted); font-family: var(--mono); }
+.versus .yes li::before { content: "+"; color: var(--accent); }
+
+/* Laudo lookup */
+.lab { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 32px; align-items: start; }
+@media (max-width: 860px) { .lab { grid-template-columns: minmax(0, 1fr); } }
+.lookup { display: flex; flex-direction: column; gap: 14px; }
+label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+input[type="text"], input[type="email"], select { width: 100%; min-height: 48px; padding: 0 14px; border-radius: 4px; border: 1px solid var(--line); background: var(--surface-2); color: var(--fg); font-family: var(--mono); font-size: 16px; }
+.field { display: flex; flex-direction: column; gap: 8px; }
+.inline { display: flex; gap: 10px; flex-wrap: wrap; }
+.inline input { flex: 1 1 200px; width: auto; }
+.report { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.report-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 16px 20px; border-bottom: 1px solid var(--line); font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.report-head b { color: var(--fg); font-weight: 500; }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 460px; }
+th, td { text-align: left; padding: 11px 20px; border-bottom: 1px solid var(--line); }
+th { font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+td.res { font-family: var(--mono); color: var(--muted); }
+.report-foot { padding: 14px 20px; font-size: 14px; color: var(--muted); }
+.status { font-family: var(--mono); font-size: 13px; min-height: 1.5em; }
+
+/* About */
+.about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; }
+@media (max-width: 860px) { .about { grid-template-columns: minmax(0, 1fr); } }
+.about blockquote { margin: 0; font-family: var(--display); font-stretch: 75%; font-weight: 600; font-size: clamp(30px, 4vw, 46px); line-height: 1.05; text-transform: uppercase; text-wrap: balance; }
+.about blockquote span { color: var(--accent); }
+.about .text { display: flex; flex-direction: column; gap: 20px; color: var(--muted); max-width: 62ch; }
+.about .text strong { color: var(--fg); font-weight: 600; }
+.values { display: flex; flex-wrap: wrap; gap: 8px; }
+.values span { border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg); }
+.say { font-family: var(--mono); font-size: 14px; color: var(--fg); }
+
+/* Pros */
+.pros { background: var(--surface); }
+.pros .wrap { display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; }
+.pros h2 { font-size: clamp(36px, 5vw, 56px); text-transform: uppercase; }
+.pros .copy { display: flex; flex-direction: column; gap: 14px; max-width: 640px; min-width: 0; }
+.pros p { color: var(--muted); }
+
+/* FAQ */
+.faq { display: flex; flex-direction: column; border-top: 1px solid var(--line); max-width: 860px; }
+details { border-bottom: 1px solid var(--line); }
+summary { cursor: pointer; list-style: none; padding: 22px 0; display: flex; justify-content: space-between; gap: 16px; font-family: var(--display); font-stretch: 85%; font-weight: 600; font-size: 22px; line-height: 1.2; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-family: var(--mono); color: var(--accent); font-size: 22px; transition: transform .2s; }
+details[open] summary::after { transform: rotate(45deg); }
+details p { padding: 0 0 22px; color: var(--muted); max-width: 66ch; }
+
+/* Waitlist */
+.wait .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+@media (max-width: 860px) { .wait .wrap { grid-template-columns: minmax(0, 1fr); } }
+.wait h2 { font-size: clamp(48px, 8vw, 96px); text-transform: uppercase; }
+.wait h2 span { color: var(--accent); }
+form.list { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 18px; }
+fieldset { border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+legend { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; padding: 0; }
+.choices { display: flex; flex-wrap: wrap; gap: 8px; }
+.choice { position: relative; }
+.choice input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.choice span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid var(--line); border-radius: 4px; font-size: 15px; }
+.choice input:checked + span { border-color: var(--accent); color: var(--accent); }
+.choice input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+.fine { font-size: 13px; color: var(--muted); }
+.ok { border: 1px solid var(--accent); border-radius: 4px; padding: 14px; font-size: 15px; }
+.consent { display: flex; gap: 12px; align-items: flex-start; font-family: var(--body); font-size: 15px; letter-spacing: 0; text-transform: none; color: var(--fg); cursor: pointer; }
+.consent input { width: 22px; height: 22px; margin: 1px 0 0; flex-shrink: 0; accent-color: var(--accent); }
+.consent a { color: var(--accent); }
+
+/* Footer */
+footer { border-top: 1px solid var(--line); padding-block: 48px; font-size: 14px; color: var(--muted); }
+footer .wrap { display: grid; grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 1fr)); gap: 32px; }
+@media (max-width: 760px) { footer .wrap { grid-template-columns: minmax(0, 1fr); } }
+footer h4 { margin: 0 0 10px; font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg); }
+footer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+footer a { text-decoration: none; } footer a:hover { color: var(--fg); }
+.legal { grid-column: 1 / -1; border-top: 1px solid var(--line); padding-top: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 12px; }
+</style>
+<style>
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="NYXOR, início">
+      <svg viewBox="0 0 84 84" aria-hidden="true"><polyline class="mark-line" points="14,68 14,16 70,60 70,18" fill="none" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"></polyline><circle class="mark-dot" cx="70" cy="14" r="9"></circle></svg>
+      <span class="word">NYXOR</span>
+    </a>
+    <nav class="main" aria-label="Principal">
+      <a href="#produtos">Produtos</a>
+      <a href="#ciencia">Ciência</a>
+      <a href="#laudos">Laudos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="btn" href="#lista">Lista de espera</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="launch"><i aria-hidden="true"></i> Lançamento em 12 de abril de 2027</span>
+        <h1>Força<br><span>medida.</span></h1>
+        <p class="lead">Suplementação com base científica. Creatina Creapure® e whey 100% isolado, com dose clínica no rótulo e laudo de cada lote aberto para você conferir.</p>
+        <div class="cta-row">
+          <a class="btn" href="#lista">Entrar na lista de espera</a>
+          <a class="btn ghost" href="#produtos">Ver os produtos</a>
+        </div>
+      </div>
+      <figure class="chart" style="margin:0" aria-label="O símbolo NYXOR desenhado como um gráfico de desempenho">
+        <div class="chart-top"><span>Curva de desempenho</span><span>N = linha de dados</span></div>
+        <svg viewBox="0 0 360 300" role="img" aria-label="Linha em forma de N que sobe e termina num ponto verde">
+          <g class="grid">
+            <line x1="20" y1="60" x2="340" y2="60"></line>
+            <line x1="20" y1="120" x2="340" y2="120"></line>
+            <line x1="20" y1="180" x2="340" y2="180"></line>
+            <line x1="20" y1="240" x2="340" y2="240"></line>
+          </g>
+          <polyline class="curve" points="60,240 60,60 300,210 300,62"></polyline>
+          <circle class="dot" cx="300" cy="40" r="15"></circle>
+          <g class="ticks">
+            <text x="20" y="282">SEM 0</text>
+            <text x="150" y="282">SEM 4</text>
+            <text x="286" y="282">SEM 8</text>
+          </g>
+        </svg>
+        <div class="chart-bottom"><span>Creapure® · 3 g/dose</span><span>Laudo por lote</span></div>
+      </figure>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <div class="cell"><strong>3 g</strong><span>de creatina por dose</span></div>
+      <div class="cell"><strong>100%</strong><span>whey isolado (WPI)</span></div>
+      <div class="cell"><strong>1 laudo</strong><span>publicado por lote</span></div>
+      <div class="cell"><strong>0</strong><span>nomes fantasiosos no rótulo</span></div>
+    </div>
+  </div>
+
+  <section class="band" id="produtos" style="border-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Linha Performance · mix de lançamento</span>
+        <h2>Três produtos.<br>Nenhum de enchimento.</h2>
+        <p class="lead">A gente lança pouco e bem feito. Cada produto diz no nome o que entrega e traz no rótulo a dose que os estudos usam.</p>
+      </div>
+
+      <div class="products">
+        <article class="product">
+          <div class="stage">
+            <div class="pot s150" aria-hidden="true">
+              <div class="lid"></div>
+              <div class="body">
+                <div class="row"><span class="brand"><svg viewBox="0 0 84 84"><polyline points="14,68 14,16 70,60 70,18" fill="none" stroke="#F4F5F2" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="70" cy="14" r="10" fill="#C8F135"></circle></svg>NYXOR</span><span class="tag">PREMIUM</span></div>
+                <div><div class="cat">SUPLEMENTO ALIMENTAR</div><div class="name">Creatina</div><div class="sub">MONOHIDRATADA</div></div>
+                <div class="facts"><span>3 g<br>dose</span><span>50<br>doses</span><span>laudo<br>lote</span></div>
+                <div class="row"><span class="foot">PERFORMANCE SCIENCE</span><span class="net">150 g</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="pinfo">
+            <span class="role">Para começar</span>
+            <h3>Creatina Creapure® 150 g</h3>
+            <p>A mesma matéria-prima e a mesma fórmula do pote de 300 g, numa embalagem menor para você experimentar.</p>
+            <dl class="specs">
+              <dt>Matéria-prima</dt><dd>Creapure®, Alemanha</dd>
+              <dt>Dose</dt><dd>3 g por dia</dd>
+              <dt>Doses</dt><dd>50</dd>
+              <dt>Sabor</dt><dd>Sem sabor</dd>
+            </dl>
+            <div class="price"><strong>Abr/2027</strong><span>50 doses de 3 g</span></div>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="stage">
+            <div class="pot s300" aria-hidden="true">
+              <div class="lid"></div>
+              <div class="body">
+                <div class="row"><span class="brand"><svg viewBox="0 0 84 84"><polyline points="14,68 14,16 70,60 70,18" fill="none" stroke="#F4F5F2" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="70" cy="14" r="10" fill="#C8F135"></circle></svg>NYXOR</span><span class="tag">PREMIUM</span></div>
+                <div><div class="cat">SUPLEMENTO ALIMENTAR</div><div class="name">Creatina</div><div class="sub">MONOHIDRATADA</div></div>
+                <div class="facts"><span>3 g<br>dose</span><span>100<br>doses</span><span>laudo<br>lote</span></div>
+                <div class="row"><span class="foot">PERFORMANCE SCIENCE</span><span class="net">300 g</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="pinfo">
+            <span class="role">Produto principal</span>
+            <h3>Creatina Creapure® 300 g</h3>
+            <p>Creatina monohidratada Creapure®, produzida na Alemanha. Sem sabor e sem aditivos, para misturar em água, suco ou no shake.</p>
+            <dl class="specs">
+              <dt>Matéria-prima</dt><dd>Creapure®, Alemanha</dd>
+              <dt>Dose</dt><dd>3 g por dia</dd>
+              <dt>Doses</dt><dd>100</dd>
+              <dt>Sabor</dt><dd>Sem sabor</dd>
+            </dl>
+            <div class="price"><strong>Abr/2027</strong><span>100 doses de 3 g</span></div>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="stage">
+            <div class="pot whey" aria-hidden="true">
+              <div class="lid"></div>
+              <div class="body">
+                <div class="row"><span class="brand"><svg viewBox="0 0 84 84"><polyline points="14,68 14,16 70,60 70,18" fill="none" stroke="#F4F5F2" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="70" cy="14" r="10" fill="#C8F135"></circle></svg>NYXOR</span><span class="tag line">● PERFORMANCE</span></div>
+                <div><div class="cat">SUPLEMENTO ALIMENTAR</div><div class="name">Whey<br>Isolado</div><div class="sub">100% WPI</div></div>
+                <div><div class="big">27 g</div><div class="cat" style="margin-top:3px">PROTEÍNA POR DOSE</div></div>
+                <span class="flavor">SABOR DOCE DE LEITE</span>
+                <div class="row"><span class="foot">PERFORMANCE SCIENCE</span><span class="net">900 g</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="pinfo">
+            <span class="role">Sabor-assinatura</span>
+            <h3>Whey Isolado Doce de Leite 900 g</h3>
+            <p>100% proteína isolada do soro do leite (WPI 90), importada. Um sabor brasileiro, que você não encontra em qualquer prateleira.</p>
+            <dl class="specs">
+              <dt>Proteína</dt><dd>Meta de 27 g por dose</dd>
+              <dt>Tipo</dt><dd>100% isolado (WPI 90)</dd>
+              <dt>Doses</dt><dd>30</dd>
+              <dt>Sabor</dt><dd>Doce de leite</dd>
+            </dl>
+            <div class="price"><strong>Abr/2027</strong><span>30 doses</span></div>
+          </div>
+        </article>
+      </div>
+      <p class="note">Os preços saem no lançamento, e quem está na lista de espera fica sabendo primeiro. Pré-treino chega no segundo lote.</p>
+    </div>
+  </section>
+
+  <section class="band" id="ciencia">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Como a NYXOR trabalha</span>
+        <h2>Ciência no rótulo,<br>não no discurso.</h2>
+        <p class="lead">A NYXOR fala como um pesquisador que também treina. Sem “resultado absurdo” e sem “transformação total”, só o que dá para medir.</p>
+      </div>
+      <div class="method">
+        <article>
+          <span class="figure">3 g / dia</span>
+          <h3>Dose clínica</h3>
+          <p>A dose que está no rótulo é a dose que os estudos usam. Nada de “mistura exclusiva” com quantidade escondida.</p>
+        </article>
+        <article>
+          <span class="figure">Creapure® · WPI 90</span>
+          <h3>Origem declarada</h3>
+          <p>A gente diz de onde vem cada matéria-prima. A creatina é Creapure®, feita na Alemanha. O whey é isolado e importado.</p>
+        </article>
+        <article>
+          <span class="figure">QR no pote</span>
+          <h3>Laudo por lote</h3>
+          <p>Cada lote passa por análise de laboratório, e o resultado fica publicado aqui no site. É só apontar a câmera para o QR do pote.</p>
+        </article>
+        <article>
+          <span class="figure">Nome = função</span>
+          <h3>Rótulo que se lê</h3>
+          <p>O nome do produto diz o que ele entrega. A tabela e os ingredientes vêm em linguagem que dá para entender sem ser bioquímico.</p>
+        </article>
+      </div>
+
+      <div class="versus">
+        <div>
+          <h3>O que você não vai ver aqui</h3>
+          <ul>
+            <li>Produto chamado “Fúria”, “Titan” ou “Monstro”</li>
+            <li>Superlativo sem prova, como “o mais forte do Brasil”</li>
+            <li>Whey concentrado vendido como premium</li>
+            <li>Dose escondida em “blend proprietário”</li>
+          </ul>
+        </div>
+        <div class="yes">
+          <h3>O que você vai ver</h3>
+          <ul>
+            <li>Dose e origem de cada ingrediente no rótulo</li>
+            <li>Laudo de cada lote, aberto para consulta</li>
+            <li>Conteúdo que explica o porquê de cada produto</li>
+            <li>Poucos produtos, cada um feito com cuidado</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="laudos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Transparência</span>
+        <h2>Confira o seu lote.</h2>
+      </div>
+      <div class="lab">
+        <form class="lookup" id="lote-form" novalidate>
+          <p class="lead">O número do lote está impresso no fundo do pote, ao lado da validade. Digite aqui para ver o laudo de laboratório daquele lote.</p>
+          <div class="field">
+            <label for="lote">Número do lote</label>
+            <div class="inline">
+              <input type="text" id="lote" name="lote" placeholder="Ex.: CR300-0001" autocomplete="off">
+              <button class="btn" type="submit">Ver laudo</button>
+            </div>
+          </div>
+          <p class="status" id="lote-status" role="status" aria-live="polite"></p>
+        </form>
+        <div class="report" aria-labelledby="report-title">
+          <div class="report-head"><span id="report-title">Modelo do laudo · Creatina Creapure®</span><span>Lote <b id="lote-shown">—</b></span></div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Análise</th><th>O que verifica</th><th>Resultado</th></tr></thead>
+              <tbody>
+                <tr><td>Teor de creatina</td><td>Pureza da creatina monohidratada</td><td class="res">no 1º lote</td></tr>
+                <tr><td>Creatinina</td><td>Subproduto da degradação da creatina</td><td class="res">no 1º lote</td></tr>
+                <tr><td>Diciandiamida</td><td>Resíduo comum em creatinas de baixa qualidade</td><td class="res">no 1º lote</td></tr>
+                <tr><td>Di-hidrotriazina</td><td>Contaminante de processo</td><td class="res">no 1º lote</td></tr>
+                <tr><td>Metais pesados</td><td>Chumbo, cádmio, mercúrio e arsênio</td><td class="res">no 1º lote</td></tr>
+                <tr><td>Microbiológico</td><td>Bactérias, bolores e leveduras</td><td class="res">no 1º lote</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="report-foot">Os laudos começam a ser publicados com o primeiro lote, em abril de 2027. O whey isolado terá laudo próprio, com teor de proteína e aminograma.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="sobre">
+    <div class="wrap about">
+      <div style="display:flex;flex-direction:column;gap:24px;min-width:0">
+        <span class="eyebrow">Sobre a NYXOR</span>
+        <blockquote>Traduzir a ciência do exercício em produtos <span>simples, seguros e eficazes.</span></blockquote>
+      </div>
+      <div class="text">
+        <p>A <strong>NYXOR</strong> nasceu em São Paulo para quem treina de verdade e quer saber o que está tomando. A ideia é simples: suplementação embasada em evidência, sem promessa exagerada.</p>
+        <p>Enquanto boa parte do mercado fala de intensidade e estética, a gente prefere falar de precisão. Rótulo didático, dose clínica, matéria-prima de origem conhecida e laudo publicado.</p>
+        <div class="values" aria-label="Valores">
+          <span>Rigor científico</span><span>Rótulo transparente</span><span>Performance real</span><span>Simplicidade</span>
+        </div>
+        <p class="say">Como se fala: “NÍ-ror”.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band pros" id="profissionais">
+    <div class="wrap">
+      <div class="copy">
+        <span class="eyebrow">Para nutricionistas e personal trainers</span>
+        <h2>Prescreva sabendo o que tem no pote.</h2>
+        <p>Fichas técnicas, laudos por lote e amostras para quem acompanha alunos e pacientes. Cadastre-se na lista e marque que é profissional da saúde ou do esporte.</p>
+      </div>
+      <a class="btn" href="#lista">Quero ser parceiro</a>
+    </div>
+  </section>
+
+  <section class="band" id="duvidas">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Perguntas frequentes</span>
+        <h2>Dúvidas</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>O que é Creapure®?</summary>
+          <p>Creapure® é a creatina monohidratada produzida pela AlzChem, na Alemanha, com controle de pureza próprio. É a matéria-prima das duas creatinas NYXOR.</p>
+        </details>
+        <details>
+          <summary>Como tomar a creatina?</summary>
+          <p>A porção indicada no rótulo é de 3 g por dia, misturada em água, suco ou no shake. Não precisa de fase de saturação. Se você tem alguma condição de saúde, converse antes com seu médico ou nutricionista.</p>
+        </details>
+        <details>
+          <summary>Qual a diferença entre whey isolado e concentrado?</summary>
+          <p>O isolado passa por mais etapas de filtração, então tem mais proteína por dose e menos gordura e lactose que o concentrado. Por isso a NYXOR só trabalha com isolado.</p>
+        </details>
+        <details>
+          <summary>Por que o whey tem um sabor só?</summary>
+          <p>Doce de leite é o nosso sabor-assinatura. Novos sabores entram nos próximos lotes, escolhidos com base no que a lista de espera pedir. Conte qual você quer no formulário abaixo.</p>
+        </details>
+        <details>
+          <summary>Quando e onde vou poder comprar?</summary>
+          <p>O lançamento está previsto para 12 de abril de 2027, aqui no site e nos principais marketplaces. Quem está na lista de espera fica sabendo primeiro.</p>
+        </details>
+        <details>
+          <summary>Vai ter pré-treino?</summary>
+          <p>Sim. O pré-treino NYXOR está previsto para o segundo lote, depois do lançamento.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band wait" id="lista">
+    <div class="wrap">
+      <div style="display:flex;flex-direction:column;gap:20px;min-width:0">
+        <span class="eyebrow">Lista de espera</span>
+        <h2>Seja o primeiro <span>a testar.</span></h2>
+        <p class="lead">Avisamos quando o primeiro lote estiver pronto. Sua resposta também ajuda a decidir o próximo sabor do whey.</p>
+      </div>
+      <form class="list" id="wait-form" name="lista-de-espera" method="POST" data-netlify="true" netlify-honeypot="empresa" novalidate>
+        <input type="hidden" name="form-name" value="lista-de-espera">
+        <p hidden><label for="w-empresa">Não preencha este campo</label><input type="text" id="w-empresa" name="empresa" tabindex="-1" autocomplete="off"></p>
+        <div class="field">
+          <label for="w-nome">Nome</label>
+          <input type="text" id="w-nome" name="nome" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="w-email">E-mail</label>
+          <input type="email" id="w-email" name="email" autocomplete="email" required>
+        </div>
+        <fieldset>
+          <legend>Qual produto você quer primeiro?</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="produto" id="p-300" value="Creatina 300 g" checked><span>Creatina 300 g</span></label>
+            <label class="choice"><input type="radio" name="produto" id="p-150" value="Creatina 150 g"><span>Creatina 150 g</span></label>
+            <label class="choice"><input type="radio" name="produto" id="p-whey" value="Whey isolado"><span>Whey isolado</span></label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="w-sabor">Próximo sabor de whey que você quer</label>
+          <select id="w-sabor" name="sabor">
+            <option>Chocolate</option>
+            <option>Baunilha</option>
+            <option>Cookies</option>
+            <option>Morango</option>
+            <option>Sem sabor</option>
+          </select>
+        </div>
+        <label class="choice" style="align-self:flex-start"><input type="checkbox" id="w-pro" name="profissional" value="sim"><span>Sou nutricionista ou personal trainer</span></label>
+        <label class="consent" for="w-ok"><input type="checkbox" id="w-ok" name="consentimento" value="aceito" required><span>Li a <a href="privacidade.html">política de privacidade</a> e aceito receber e-mails da NYXOR.</span></label>
+        <p class="status" id="wait-status" role="status" aria-live="polite"></p>
+        <button class="btn" type="submit">Entrar na lista</button>
+        <p class="fine">Você pode sair da lista quando quiser, pelo link no rodapé de qualquer e-mail nosso.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <a class="logo" href="#inicio" aria-label="NYXOR, voltar ao início">
+        <svg viewBox="0 0 84 84" aria-hidden="true"><polyline class="mark-line" points="14,68 14,16 70,60 70,18" fill="none" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"></polyline><circle class="mark-dot" cx="70" cy="14" r="9"></circle></svg>
+        <span class="word">NYXOR</span>
+      </a>
+      <span class="eyebrow">Performance Science</span>
+      <p>Suplementação com base científica. Performance real.</p>
+    </div>
+    <div>
+      <h4>Navegue</h4>
+      <ul>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#laudos">Laudos por lote</a></li>
+        <li><a href="#profissionais">Para profissionais</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a href="privacidade.html">Política de privacidade</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Empresa</h4>
+      <ul>
+        <li>NYXOR PERFORMANCE SCIENCE LTDA.</li>
+        <li>CNPJ em registro</li>
+        <li>Rua José Zappi, 1039, sala 02</li>
+        <li>Vila Prudente, São Paulo/SP</li>
+        <li>contato@nyxorperformance.com.br</li>
+      </ul>
+    </div>
+    <div class="legal">
+      <p>Este produto não é um medicamento. Não exceder a recomendação diária de consumo indicada na embalagem. Mantenha fora do alcance de crianças.</p>
+      <p>Creapure® é marca registrada da AlzChem Trostberg GmbH.</p>
+      <p>© 2026 NYXOR PERFORMANCE SCIENCE LTDA.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var loteForm = document.getElementById('lote-form');
+  var loteInput = document.getElementById('lote');
+  var loteStatus = document.getElementById('lote-status');
+  var loteShown = document.getElementById('lote-shown');
+  loteForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = loteInput.value.trim().toUpperCase();
+    if (!v) { loteStatus.textContent = 'Digite o número do lote impresso no fundo do pote.'; loteInput.focus(); return; }
+    loteShown.textContent = v;
+    loteStatus.textContent = 'Ainda não há lotes produzidos. O laudo do lote ' + v + ' aparece aqui depois do lançamento, em abril de 2027.';
+  });
+
+  var waitForm = document.getElementById('wait-form');
+  var waitStatus = document.getElementById('wait-status');
+  waitForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nome = document.getElementById('w-nome').value.trim();
+    var email = document.getElementById('w-email');
+    if (!nome) { waitStatus.textContent = 'Escreva seu nome.'; document.getElementById('w-nome').focus(); return; }
+    if (!email.value.trim() || !email.checkValidity()) { waitStatus.textContent = 'Confira o e-mail: ele precisa ter o formato nome@dominio.com.'; email.focus(); return; }
+    var consent = document.getElementById('w-ok');
+    if (!consent.checked) { waitStatus.textContent = 'Para entrar na lista, marque a caixa de aceite da política de privacidade.'; consent.focus(); return; }
+    var btn = waitForm.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    waitStatus.textContent = 'Enviando…';
+    var body = new URLSearchParams(new FormData(waitForm)).toString();
+    var first = nome.split(' ')[0];
+    function done(text) {
+      var ok = document.createElement('p');
+      ok.className = 'ok';
+      ok.textContent = text;
+      waitForm.replaceChildren(ok);
+    }
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body })
+      .then(function (r) {
+        if (!r.ok) throw new Error('status ' + r.status);
+        done('Pronto, ' + first + '! Você está na lista de espera da NYXOR. Avisamos no e-mail ' + email.value.trim() + ' quando o primeiro lote estiver pronto.');
+      })
+      .catch(function () {
+        if (location.hostname.indexOf('nyxor') === -1) {
+          done('Prévia do site: aqui o formulário não envia dados. No site publicado, ' + first + ' entra na lista com o e-mail ' + email.value.trim() + '.');
+          return;
+        }
+        btn.disabled = false;
+        waitStatus.textContent = 'Não conseguimos registrar agora. Confira sua conexão e tente de novo.';
+      });
+  });
+})();
+</script>
+</body>
+</html>
