@@ -1,6 +1,6 @@
 # NYXOR Performance Science
 
-Site de pré-lançamento da NYXOR, publicado em https://nyxorperformance.com.br.
+Site de pré-lançamento da NYXOR, publicado em https://nyxorperformance.com.br (endereço da Netlify: https://nyxorperformance.netlify.app).
 
 - `index.html`: página principal (produtos, método, laudos, sobre, dúvidas e lista de espera)
 - `privacidade.html`: política de privacidade (LGPD)
