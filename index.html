@@ -138,7 +138,7 @@ nav.main .btn { min-height: 44px; padding: 0 16px; color: var(--accent-ink); mar
 .pot .sub { font-stretch: 75%; font-weight: 500; color: #C8F135; line-height: 1; }
 .pot .facts { border-top: 1px solid var(--pot-line); border-bottom: 1px solid var(--pot-line); padding: 5px 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); font-family: var(--mono); font-size: 7px; line-height: 1.35; }
 .pot .flavor { align-self: flex-start; background: #C48A4A; color: #121417; font-family: var(--mono); font-size: 7px; letter-spacing: 0.14em; padding: 3px 6px; border-radius: 2px; }
-.pot .flavor.flavor-choc { background: #6B4226; color: #F4F5F2; }
+.pot .flavor.flavor-van { background: #E9D8A6; color: #121417; }
 .pot .foot { font-family: var(--mono); font-size: 6px; letter-spacing: 0.28em; color: #A9ADA6; }
 .pot .net { font-stretch: 75%; font-weight: 700; font-size: 15px; }
 .pot.s150 .lid { width: 148px; } .pot.s150 .body { width: 170px; height: 250px; } .pot.s150 .name { font-size: 30px; } .pot.s150 .sub { font-size: 13px; }
@@ -209,11 +209,6 @@ td.res { font-family: var(--mono); color: var(--muted); }
 .say { font-family: var(--mono); font-size: 14px; color: var(--fg); }
 
 /* Pros */
-.origins { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); }
-@media (max-width: 960px) { .origins { grid-template-columns: minmax(0, 1fr); } }
-.origin { padding: 28px 24px 28px 0; display: flex; flex-direction: column; gap: 14px; border-bottom: 1px solid var(--line); min-width: 0; }
-.origin .role { font-family: var(--mono); font-size: 13px; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; }
-.origin p { color: var(--muted); font-size: 16px; }
 .pros { background: var(--surface); }
 .pros .wrap { display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; }
 .pros h2 { font-size: clamp(36px, 5vw, 56px); text-transform: uppercase; }
@@ -277,7 +272,6 @@ img { max-width: 100%; }
       <a href="#ciencia">Ciência</a>
       <a href="#laudos">Laudos</a>
       <a href="#sobre">Sobre</a>
-      <a href="#origem">Origem</a>
       <a href="#duvidas">Dúvidas</a>
       <a class="btn" href="#lista">Lista de espera</a>
     </nav>
@@ -398,20 +392,20 @@ img { max-width: 100%; }
                 <div class="row"><span class="brand"><svg viewBox="0 0 84 84"><polyline points="14,68 14,16 70,60 70,18" fill="none" stroke="#F4F5F2" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="70" cy="14" r="10" fill="#C8F135"></circle></svg>NYXOR</span><span class="tag line">● PERFORMANCE</span></div>
                 <div><div class="cat">SUPLEMENTO ALIMENTAR</div><div class="name">Whey<br>Isolado</div><div class="sub">100% WPI</div></div>
                 <div><div class="big">27 g</div><div class="cat" style="margin-top:3px">PROTEÍNA POR DOSE</div></div>
-                <span class="flavor flavor-choc">SABOR CHOCOLATE</span>
+                <span class="flavor flavor-van">SABOR BAUNILHA</span>
                 <div class="row"><span class="foot">PERFORMANCE SCIENCE</span><span class="net">900 g</span></div>
               </div>
             </div>
           </div>
           <div class="pinfo">
             <span class="role">Sabor de lançamento</span>
-            <h3>Whey Isolado Chocolate 900 g</h3>
-            <p>100% proteína isolada do soro do leite (WPI 90), importada. Chocolate para o dia a dia, com meta de 27 g de proteína por dose.</p>
+            <h3>Whey Isolado Baunilha 900 g</h3>
+            <p>100% proteína isolada do soro do leite (WPI 90), importada. Baunilha suave, que vai bem com água, leite, fruta ou café, com meta de 27 g de proteína por dose.</p>
             <dl class="specs">
               <dt>Proteína</dt><dd>Meta de 27 g por dose</dd>
               <dt>Tipo</dt><dd>100% isolado (WPI 90)</dd>
               <dt>Doses</dt><dd>30</dd>
-              <dt>Sabor</dt><dd>Chocolate</dd>
+              <dt>Sabor</dt><dd>Baunilha</dd>
             </dl>
             <div class="price"><strong>Jan/2027</strong><span>30 doses</span></div>
           </div>
@@ -530,32 +524,6 @@ img { max-width: 100%; }
     </div>
   </section>
 
-  <section class="band" id="origem">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Origem dos sabores</span>
-        <h2>Cada sabor<br>tem endereço.</h2>
-        <p class="lead">Ingrediente bom tem nome, lugar e safra. Por isso cada sabor da NYXOR começa pela origem, e não pelo aroma.</p>
-      </div>
-      <div class="origins">
-        <article class="origin">
-          <span class="role">Chocolate · Cacau de Linhares (ES)</span>
-          <p>Linhares, no norte do Espírito Santo, tem Indicação de Procedência para cacau em amêndoas, registrada no INPI. É um cacau que já foi selecionado entre os melhores do mundo no Salon du Chocolat, em Paris.</p>
-          <p>É esse cacau que estamos testando na fórmula do whey chocolate. Ele só vai para o pote se ganhar no teste cego.</p>
-        </article>
-        <article class="origin">
-          <span class="role">Creatina · Creapure®, Alemanha</span>
-          <p>Creatina monohidratada Creapure®, produzida pela AlzChem na Alemanha. Pureza controlada e laudo de cada lote.</p>
-        </article>
-        <article class="origin">
-          <span class="role">Próximo sabor · Doce de leite</span>
-          <p>Chega no segundo lote. A lista de espera ajuda a escolher os próximos.</p>
-        </article>
-      </div>
-      <p class="note">Quando o primeiro lote sair, cada pote vai ter o caminho completo no QR code: do produtor ao laudo.</p>
-    </div>
-  </section>
-
   <section class="band pros" id="profissionais">
     <div class="wrap">
       <div class="copy">
@@ -588,7 +556,7 @@ img { max-width: 100%; }
         </details>
         <details>
           <summary>Por que o whey tem um sabor só?</summary>
-          <p>O primeiro lote sai em chocolate. O doce de leite já está confirmado para o segundo lote, e os sabores seguintes saem do que a lista de espera pedir. Conte qual você quer no formulário abaixo.</p>
+          <p>O primeiro lote sai em baunilha, um sabor que combina com quase tudo. Os próximos sabores saem do que a lista de espera pedir. Conte qual você quer no formulário abaixo.</p>
         </details>
         <details>
           <summary>Quando e onde vou poder comprar?</summary>
@@ -631,7 +599,8 @@ img { max-width: 100%; }
         <div class="field">
           <label for="w-sabor">Próximo sabor de whey que você quer</label>
           <select id="w-sabor" name="sabor">
-            <option>Baunilha</option>
+            <option>Chocolate</option>
+            <option>Doce de leite</option>
             <option>Cookies</option>
             <option>Morango</option>
             <option>Sem sabor</option>
