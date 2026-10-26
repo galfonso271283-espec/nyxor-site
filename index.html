@@ -209,6 +209,13 @@ td.res { font-family: var(--mono); color: var(--muted); }
 .say { font-family: var(--mono); font-size: 14px; color: var(--fg); }
 
 /* Pros */
+.origins { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 0; border-top: 1px solid var(--line); }
+@media (max-width: 960px) { .origins { grid-template-columns: minmax(0, 1fr); } }
+.origin { padding: 28px 24px 28px 0; display: flex; flex-direction: column; gap: 14px; border-bottom: 1px solid var(--line); min-width: 0; }
+.origin .role { font-family: var(--mono); font-size: 13px; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; }
+.origin p { color: var(--muted); font-size: 16px; }
+.origin blockquote { margin: 0; padding-left: 16px; border-left: 2px solid var(--accent); color: var(--fg); font-size: 17px; line-height: 1.5; }
+.origin cite { display: block; margin-top: 10px; font-style: normal; font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.08em; }
 .pros { background: var(--surface); }
 .pros .wrap { display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; }
 .pros h2 { font-size: clamp(36px, 5vw, 56px); text-transform: uppercase; }
@@ -272,6 +279,7 @@ img { max-width: 100%; }
       <a href="#ciencia">Ciência</a>
       <a href="#laudos">Laudos</a>
       <a href="#sobre">Sobre</a>
+      <a href="#origem">Origem</a>
       <a href="#duvidas">Dúvidas</a>
       <a class="btn" href="#lista">Lista de espera</a>
     </nav>
@@ -521,6 +529,32 @@ img { max-width: 100%; }
         </div>
         <p class="say">Como se fala: “NÍ-ror”.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="band" id="origem">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Origem dos sabores</span>
+        <h2>Cada sabor<br>tem endereço.</h2>
+        <p class="lead">Ingrediente bom tem nome, lugar e safra. Por isso cada sabor da NYXOR começa pela origem, e não pelo aroma.</p>
+      </div>
+      <div class="origins">
+        <article class="origin">
+          <span class="role">Chocolate · Cacau de Linhares (ES)</span>
+          <p>Linhares, no norte do Espírito Santo, tem Indicação de Procedência para cacau em amêndoas, registrada no INPI. É um cacau que já foi selecionado entre os melhores do mundo no Salon du Chocolat, em Paris.</p>
+          <blockquote>Moro perto de Linhares. Quando fui criar o chocolate da NYXOR, não fazia sentido buscar cacau longe daqui. Estou visitando as fazendas, conversando com os produtores e testando a amêndoa na fórmula. O chocolate só vai para o pote se ganhar no teste cego.<cite>Grégory Alfonso, fundador</cite></blockquote>
+        </article>
+        <article class="origin">
+          <span class="role">Creatina · Creapure®, Alemanha</span>
+          <p>Creatina monohidratada Creapure®, produzida pela AlzChem na Alemanha. Pureza controlada e laudo de cada lote.</p>
+        </article>
+        <article class="origin">
+          <span class="role">Próximo sabor · Doce de leite</span>
+          <p>Chega no segundo lote. A lista de espera ajuda a escolher os próximos.</p>
+        </article>
+      </div>
+      <p class="note">Quando o primeiro lote sair, cada pote vai ter o caminho completo no QR code: do produtor ao laudo.</p>
     </div>
   </section>
 
