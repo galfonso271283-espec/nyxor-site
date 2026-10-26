@@ -138,6 +138,7 @@ nav.main .btn { min-height: 44px; padding: 0 16px; color: var(--accent-ink); mar
 .pot .sub { font-stretch: 75%; font-weight: 500; color: #C8F135; line-height: 1; }
 .pot .facts { border-top: 1px solid var(--pot-line); border-bottom: 1px solid var(--pot-line); padding: 5px 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); font-family: var(--mono); font-size: 7px; line-height: 1.35; }
 .pot .flavor { align-self: flex-start; background: #C48A4A; color: #121417; font-family: var(--mono); font-size: 7px; letter-spacing: 0.14em; padding: 3px 6px; border-radius: 2px; }
+.pot .flavor.flavor-van { background: #E9D8A6; color: #121417; }
 .pot .foot { font-family: var(--mono); font-size: 6px; letter-spacing: 0.28em; color: #A9ADA6; }
 .pot .net { font-stretch: 75%; font-weight: 700; font-size: 15px; }
 .pot.s150 .lid { width: 148px; } .pot.s150 .body { width: 170px; height: 250px; } .pot.s150 .name { font-size: 30px; } .pot.s150 .sub { font-size: 13px; }
@@ -208,6 +209,11 @@ td.res { font-family: var(--mono); color: var(--muted); }
 .say { font-family: var(--mono); font-size: 14px; color: var(--fg); }
 
 /* Pros */
+.origins { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); }
+@media (max-width: 960px) { .origins { grid-template-columns: minmax(0, 1fr); } }
+.origin { padding: 28px 24px 28px 0; display: flex; flex-direction: column; gap: 14px; border-bottom: 1px solid var(--line); min-width: 0; }
+.origin .role { font-family: var(--mono); font-size: 13px; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; }
+.origin p { color: var(--muted); font-size: 16px; }
 .pros { background: var(--surface); }
 .pros .wrap { display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; }
 .pros h2 { font-size: clamp(36px, 5vw, 56px); text-transform: uppercase; }
@@ -271,6 +277,7 @@ img { max-width: 100%; }
       <a href="#ciencia">Ciência</a>
       <a href="#laudos">Laudos</a>
       <a href="#sobre">Sobre</a>
+      <a href="#origem">Origem</a>
       <a href="#duvidas">Dúvidas</a>
       <a class="btn" href="#lista">Lista de espera</a>
     </nav>
@@ -306,14 +313,14 @@ img { max-width: 100%; }
             <text x="286" y="282">SEM 8</text>
           </g>
         </svg>
-        <div class="chart-bottom"><span>Creapure® · 3 g/dose</span><span>Laudo por lote</span></div>
+        <div class="chart-bottom"><span>Creapure® · 0,07 g/kg</span><span>Laudo por lote</span></div>
       </figure>
     </div>
   </section>
 
   <div class="strip">
     <div class="wrap">
-      <div class="cell"><strong>3 g</strong><span>de creatina por dose</span></div>
+      <div class="cell"><strong>0,07 g</strong><span>de creatina por kg de peso</span></div>
       <div class="cell"><strong>100%</strong><span>whey isolado (WPI)</span></div>
       <div class="cell"><strong>1 laudo</strong><span>publicado por lote</span></div>
       <div class="cell"><strong>0</strong><span>nomes fantasiosos no rótulo</span></div>
@@ -336,7 +343,7 @@ img { max-width: 100%; }
               <div class="body">
                 <div class="row"><span class="brand"><svg viewBox="0 0 84 84"><polyline points="14,68 14,16 70,60 70,18" fill="none" stroke="#F4F5F2" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="70" cy="14" r="10" fill="#C8F135"></circle></svg>NYXOR</span><span class="tag">PREMIUM</span></div>
                 <div><div class="cat">SUPLEMENTO ALIMENTAR</div><div class="name">Creatina</div><div class="sub">MONOHIDRATADA</div></div>
-                <div class="facts"><span>3 g<br>dose</span><span>50<br>doses</span><span>laudo<br>lote</span></div>
+                <div class="facts"><span>0,07 g/kg<br>até 5 g/dia</span><span>30 porções<br>de 5 g</span><span>laudo<br>lote</span></div>
                 <div class="row"><span class="foot">PERFORMANCE SCIENCE</span><span class="net">150 g</span></div>
               </div>
             </div>
@@ -347,11 +354,12 @@ img { max-width: 100%; }
             <p>A mesma matéria-prima e a mesma fórmula do pote de 300 g, numa embalagem menor para você experimentar.</p>
             <dl class="specs">
               <dt>Matéria-prima</dt><dd>Creapure®, Alemanha</dd>
-              <dt>Dose</dt><dd>3 g por dia</dd>
-              <dt>Doses</dt><dd>50</dd>
+              <dt>Dose</dt><dd>0,07 g/kg por dia, até 5 g</dd>
+              <dt>Porções</dt><dd>30 de 5 g</dd>
+              <dt>Dosador</dt><dd>Graduado, até 10 g</dd>
               <dt>Sabor</dt><dd>Sem sabor</dd>
             </dl>
-            <div class="price"><strong>Jan/2027</strong><span>50 doses de 3 g</span></div>
+            <div class="price"><strong>Jan/2027</strong><span>30 porções de 5 g</span></div>
           </div>
         </article>
 
@@ -362,7 +370,7 @@ img { max-width: 100%; }
               <div class="body">
                 <div class="row"><span class="brand"><svg viewBox="0 0 84 84"><polyline points="14,68 14,16 70,60 70,18" fill="none" stroke="#F4F5F2" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="70" cy="14" r="10" fill="#C8F135"></circle></svg>NYXOR</span><span class="tag">PREMIUM</span></div>
                 <div><div class="cat">SUPLEMENTO ALIMENTAR</div><div class="name">Creatina</div><div class="sub">MONOHIDRATADA</div></div>
-                <div class="facts"><span>3 g<br>dose</span><span>100<br>doses</span><span>laudo<br>lote</span></div>
+                <div class="facts"><span>0,07 g/kg<br>até 5 g/dia</span><span>60 porções<br>de 5 g</span><span>laudo<br>lote</span></div>
                 <div class="row"><span class="foot">PERFORMANCE SCIENCE</span><span class="net">300 g</span></div>
               </div>
             </div>
@@ -373,11 +381,12 @@ img { max-width: 100%; }
             <p>Creatina monohidratada Creapure®, produzida na Alemanha. Sem sabor e sem aditivos, para misturar em água, suco ou no shake.</p>
             <dl class="specs">
               <dt>Matéria-prima</dt><dd>Creapure®, Alemanha</dd>
-              <dt>Dose</dt><dd>3 g por dia</dd>
-              <dt>Doses</dt><dd>100</dd>
+              <dt>Dose</dt><dd>0,07 g/kg por dia, até 5 g</dd>
+              <dt>Porções</dt><dd>60 de 5 g</dd>
+              <dt>Dosador</dt><dd>Graduado, até 10 g</dd>
               <dt>Sabor</dt><dd>Sem sabor</dd>
             </dl>
-            <div class="price"><strong>Jan/2027</strong><span>100 doses de 3 g</span></div>
+            <div class="price"><strong>Jan/2027</strong><span>60 porções de 5 g</span></div>
           </div>
         </article>
 
@@ -389,20 +398,20 @@ img { max-width: 100%; }
                 <div class="row"><span class="brand"><svg viewBox="0 0 84 84"><polyline points="14,68 14,16 70,60 70,18" fill="none" stroke="#F4F5F2" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="70" cy="14" r="10" fill="#C8F135"></circle></svg>NYXOR</span><span class="tag line">● PERFORMANCE</span></div>
                 <div><div class="cat">SUPLEMENTO ALIMENTAR</div><div class="name">Whey<br>Isolado</div><div class="sub">100% WPI</div></div>
                 <div><div class="big">27 g</div><div class="cat" style="margin-top:3px">PROTEÍNA POR DOSE</div></div>
-                <span class="flavor">SABOR DOCE DE LEITE</span>
+                <span class="flavor flavor-van">SABOR BAUNILHA</span>
                 <div class="row"><span class="foot">PERFORMANCE SCIENCE</span><span class="net">900 g</span></div>
               </div>
             </div>
           </div>
           <div class="pinfo">
-            <span class="role">Sabor-assinatura</span>
-            <h3>Whey Isolado Doce de Leite 900 g</h3>
-            <p>100% proteína isolada do soro do leite (WPI 90), importada. Um sabor brasileiro, que você não encontra em qualquer prateleira.</p>
+            <span class="role">Sabor de lançamento</span>
+            <h3>Whey Isolado Baunilha 900 g</h3>
+            <p>100% proteína isolada do soro do leite (WPI 90), importada. Baunilha suave, que vai bem com água, leite, fruta ou café, com meta de 27 g de proteína por dose.</p>
             <dl class="specs">
               <dt>Proteína</dt><dd>Meta de 27 g por dose</dd>
               <dt>Tipo</dt><dd>100% isolado (WPI 90)</dd>
               <dt>Doses</dt><dd>30</dd>
-              <dt>Sabor</dt><dd>Doce de leite</dd>
+              <dt>Sabor</dt><dd>Baunilha</dd>
             </dl>
             <div class="price"><strong>Jan/2027</strong><span>30 doses</span></div>
           </div>
@@ -421,9 +430,9 @@ img { max-width: 100%; }
       </div>
       <div class="method">
         <article>
-          <span class="figure">3 g / dia</span>
+          <span class="figure">0,07 g / kg</span>
           <h3>Dose clínica</h3>
-          <p>A dose que está no rótulo é a dose que os estudos usam. Nada de “mistura exclusiva” com quantidade escondida.</p>
+          <p>A dose acompanha o seu peso, como nos estudos, e o dosador graduado mostra quanto pôr. Nada de “mistura exclusiva” com quantidade escondida.</p>
         </article>
         <article>
           <span class="figure">Creapure® · WPI 90</span>
@@ -521,6 +530,32 @@ img { max-width: 100%; }
     </div>
   </section>
 
+  <section class="band" id="origem">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Origem dos sabores</span>
+        <h2>Cada sabor<br>tem endereço.</h2>
+        <p class="lead">Ingrediente bom tem nome, lugar e safra. Por isso cada sabor da NYXOR começa pela origem, e não pelo aroma.</p>
+      </div>
+      <div class="origins">
+        <article class="origin">
+          <span class="role">2º lote · Chocolate · Cacau de Linhares (ES)</span>
+          <p>Linhares, no norte do Espírito Santo, tem Indicação de Procedência para cacau em amêndoas, registrada no INPI. É um cacau que já foi selecionado entre os melhores do mundo no Salon du Chocolat, em Paris.</p>
+          <p>É esse cacau que estamos testando para o whey chocolate do segundo lote. Ele só vai para o pote se ganhar no teste cego.</p>
+        </article>
+        <article class="origin">
+          <span class="role">Creatina · Creapure®, Alemanha</span>
+          <p>Creatina monohidratada Creapure®, produzida pela AlzChem na Alemanha. Pureza controlada e laudo de cada lote.</p>
+        </article>
+        <article class="origin">
+          <span class="role">2º lote · Doce de leite</span>
+          <p>Chega no segundo lote, junto com o chocolate. A lista de espera ajuda a escolher os próximos.</p>
+        </article>
+      </div>
+      <p class="note">Quando o primeiro lote sair, cada pote vai ter o caminho completo no QR code: do produtor ao laudo.</p>
+    </div>
+  </section>
+
   <section class="band pros" id="profissionais">
     <div class="wrap">
       <div class="copy">
@@ -545,7 +580,7 @@ img { max-width: 100%; }
         </details>
         <details>
           <summary>Como tomar a creatina?</summary>
-          <p>A porção indicada no rótulo é de 3 g por dia, misturada em água, suco ou no shake. Não precisa de fase de saturação. Se você tem alguma condição de saúde, converse antes com seu médico ou nutricionista.</p>
+          <p>A dose é de 0,07 g por kg de peso por dia, até o limite de 5 g por dia indicado no rótulo: 50 kg = 3,5 g; 60 kg = 4,2 g; 70 kg = 4,9 g; a partir de 72 kg, 5 g. O pote vem com um dosador pequeno, de até 10 g, com marcas de 1 em 1 g: é só encher até a marca mais próxima da sua dose e misturar em água, suco ou no shake. Não precisa de fase de saturação. Para adultos a partir de 19 anos. Se você tem alguma condição de saúde, converse antes com seu médico ou nutricionista.</p>
         </details>
         <details>
           <summary>Qual a diferença entre whey isolado e concentrado?</summary>
@@ -553,7 +588,7 @@ img { max-width: 100%; }
         </details>
         <details>
           <summary>Por que o whey tem um sabor só?</summary>
-          <p>Doce de leite é o nosso sabor-assinatura. Novos sabores entram nos próximos lotes, escolhidos com base no que a lista de espera pedir. Conte qual você quer no formulário abaixo.</p>
+          <p>O primeiro lote sai em baunilha, um sabor que combina com quase tudo. Os próximos sabores saem do que a lista de espera pedir. Conte qual você quer no formulário abaixo.</p>
         </details>
         <details>
           <summary>Quando e onde vou poder comprar?</summary>
@@ -597,7 +632,7 @@ img { max-width: 100%; }
           <label for="w-sabor">Próximo sabor de whey que você quer</label>
           <select id="w-sabor" name="sabor">
             <option>Chocolate</option>
-            <option>Baunilha</option>
+            <option>Doce de leite</option>
             <option>Cookies</option>
             <option>Morango</option>
             <option>Sem sabor</option>
